@@ -10,6 +10,7 @@ public class Line {
     }
 
     public Point intersection(Line other) {
+        if (k == other.k) return null;
         
         int x =  (other.b - b ) / (k - other.k);
         int y = k * x + b;
