@@ -2,12 +2,19 @@ package com.epam.rd.autotasks.intersection;
 
 public class Line {
 
-    public Line(int k, int b) {
+    public int k, b;
 
+    public Line(int k, int b) {
+        this.k = k;
+        this.b = b;
     }
 
     public Point intersection(Line other) {
-        throw new UnsupportedOperationException();
+        
+        int x =  (other.b - b ) / (k - other.k);
+        int y = k * x + b;
+
+        return new Point(x, y);
     }
 
 }
